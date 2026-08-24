@@ -370,4 +370,68 @@ for attempt in range(5):
 else:
     print("Game over!")
 
+
+
+# 🔥 30. Advanced Challenge — Mini ATM
+
+# Create an ATM program.
+
+# The program starts with:
+
+# balance = 10000
+
+# Show this menu repeatedly:
+
+# 1. Check balance
+# 2. Deposit
+# 3. Withdraw
+# 4. Exit
+
+# Rules:
+
+# Check balance → show current balance
+# Deposit → add money
+# Withdraw → subtract money only if there is enough balance
+# Exit → stop the program
+# Invalid choice → show "Invalid choice"
+
+balance = 10000
+
+while True:
+    print("\n1. Check balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+
+    choice = input("Choose an option: ")
+
+    if choice == "1":
+        print("Balance:", balance)
+
+    elif choice == "2":
+        amount = float(input("Enter deposit amount: "))
+
+        if amount > 0:
+            balance += amount
+            print("Deposit successful")
+        else:
+            print("Invalid amount")
+
+    elif choice == "3":
+        amount = float(input("Enter withdrawal amount: "))
+
+        if amount <= 0:
+            print("Invalid amount")
+        elif amount > balance:
+            print("Insufficient balance")
+        else:
+            balance -= amount
+            print("Withdrawal successful")
+
+    elif choice == "4":
+        print("Thank you!")
+        break
+
+    else:
+        print("Invalid choice")       
            
