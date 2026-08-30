@@ -434,4 +434,28 @@ while True:
 
     else:
         print("Invalid choice")       
-           
+
+
+
+
+
+# Task 3.1: The Daily Step Tracker
+
+# Step 1: List of steps for 7 days
+steps = [4000, 5000, 3000, 8000, 10000, 2000, 6000]
+
+# Step 2: Variable to store total steps
+total_steps = 0
+
+# Step 3: Loop through the list and add each day's steps
+day_number = 1
+for day in steps:
+    total_steps = total_steps + day
+    print("Day", day_number, ":", day, "steps")
+    day_number = day_number + 1
+
+# Step 4: Calculate average after the loop
+average = total_steps / 7
+
+print("Weekly Total:", total_steps)
+print("Average Steps per Day:", average)           
